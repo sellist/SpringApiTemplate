@@ -3,12 +3,25 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackgroundAgentGlobalSettings">
+    <option name="selectedModelId" value="gpt-5-mini" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4ae787-7e00-4ce3-8fc9-7d3f3b5f7572" name="Changes" comment="" />
+    <list default="true" id="4d4ae787-7e00-4ce3-8fc9-7d3f3b5f7572" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/controller/ExampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/controller/ExampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/wrapper/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/wrapper/ResponseWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/wrapper/WrapperResponseBodyAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/wrapper/WrapperResponseBodyAdvice.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/CodeRepos/Java/SpringApiTemplate" value="3JWn1jdxokhy2zXs946Yim0jlOO" />
+    </persistenceIdMap>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -17,6 +30,21 @@
   "associatedIndex": 8
 }]]></component>
   <component name="ProjectId" id="3JWmvRy93OCFjNAF1jWZzPSHUZ9" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="gpt-5-mini" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
@@ -25,12 +53,33 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Application.executor": "Run",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/scott/CodeRepos/Python",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/CodeRepos/Java/SpringApiTemplate/src/main/java/sellist/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JAVA",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in SpringApiTemplate">
+    <configuration name="All in SpringApiTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringApiTemplate" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="SpringApiTemplate" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="sellist.Application" />
@@ -46,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in SpringApiTemplate" />
         <item itemvalue="Spring Boot.Application" />
       </list>
     </recent_temporary>
@@ -65,19 +115,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1789785430321</updated>
-      <workItem from="1789785431640" duration="3000" />
+      <workItem from="1789785431640" duration="2514000" />
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sellist/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
