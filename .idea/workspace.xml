@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackgroundAgentGlobalSettings">
-    <option name="selectedModelId" value="gpt-5-mini" />
+    <option name="selectedModelId" value="claude-haiku-4.5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d4ae787-7e00-4ce3-8fc9-7d3f3b5f7572" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/controller/ExampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/controller/ExampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/wrapper/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/wrapper/ResponseWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sellist/wrapper/WrapperResponseBodyAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sellist/wrapper/WrapperResponseBodyAdvice.java" afterDir="false" />
-    </list>
+    <list default="true" id="4d4ae787-7e00-4ce3-8fc9-7d3f3b5f7572" name="Changes" comment="initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +18,26 @@
       <entry key="_D:/CodeRepos/Java/SpringApiTemplate" value="3JWn1jdxokhy2zXs946Yim0jlOO" />
     </persistenceIdMap>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sellist"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sellist/SpringApiTemplate.git",
+    "accountId": "e5ef89dd-2b63-4784-bad9-7ddb4813049c"
+  }
+}]]></component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
@@ -51,10 +64,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in SpringApiTemplate.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Spring Boot.Application.executor": "Run",
+    "code.cleanup.on.save": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/scott/CodeRepos/Python",
@@ -67,11 +87,12 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JAVA",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.All in SpringApiTemplate">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="All in SpringApiTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringApiTemplate" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SpringApiTemplate" />
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.All in SpringApiTemplate" />
       </list>
     </recent_temporary>
   </component>
@@ -115,11 +136,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1789785430321</updated>
-      <workItem from="1789785431640" duration="2514000" />
+      <workItem from="1789785431640" duration="5212000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1789794350030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789794350030</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
