@@ -20,63 +20,63 @@ import java.util.UUID;
 public class WrapperResponseBodyAdvice implements ResponseBodyAdvice<Object>
 {
 
-private final ObjectMapper objectMapper;
-private final String apiVersion;
+    private final ObjectMapper objectMapper;
+    private final String apiVersion;
 
-public WrapperResponseBodyAdvice(ObjectMapper objectMapper,
-                                 @Value("${api.version:1.0.0}")
-                                 String apiVersion)
-    {
-    this.objectMapper = objectMapper;
-    this.apiVersion = apiVersion;
-    }
+    public WrapperResponseBodyAdvice(
+            ObjectMapper objectMapper,
+            @Value("${api.version:1.0.0}") String apiVersion)
+        {
+        this.objectMapper = objectMapper;
+        this.apiVersion = apiVersion;
+        }
 
-@Override
-public boolean supports(
-        @NonNull
-        MethodParameter returnType,
-        @NonNull
-        Class<? extends HttpMessageConverter<?>> converterType)
-    {
-    return true;
-    }
+    @Override
+    public boolean supports(
+            @NonNull MethodParameter returnType,
+            @NonNull Class<? extends HttpMessageConverter<?>> converterType)
+        {
+        return true;
+        }
 
-@Override
-public Object beforeBodyWrite(Object body,
-                              @NonNull
-                              MethodParameter returnType,
-                              @NonNull
-                              MediaType selectedContentType,
-                              @NonNull
-                              Class<? extends HttpMessageConverter<?>> selectedConverterType,
-                              @NonNull
-                              ServerHttpRequest request,
-                              @NonNull
-                              ServerHttpResponse response)
-    {
-    if (body instanceof ResponseWrapper) {
-        return body;
-    }
-
-    Metadata meta = new Metadata(extractRequestId(request), Instant.now().toEpochMilli(), apiVersion);
-    ResponseWrapper<Object> wrapped = ResponseWrapper.of(body, meta);
-
-    if (StringHttpMessageConverter.class.isAssignableFrom(selectedConverterType)) {
-        try {
-            return objectMapper.writeValueAsString(wrapped);
-        } catch (JsonProcessingException e) {
+    @Override
+    public Object beforeBodyWrite(
+            Object body,
+            @NonNull MethodParameter returnType,
+            @NonNull MediaType selectedContentType,
+            @NonNull Class<? extends HttpMessageConverter<?>> selectedConverterType,
+            @NonNull ServerHttpRequest request,
+            @NonNull ServerHttpResponse response)
+        {
+        if (body instanceof ResponseWrapper) {
             return body;
         }
-    }
 
-    return wrapped;
-    }
+        Metadata meta = new Metadata(
+                extractRequestId(request),
+                Instant.now().toEpochMilli(),
+                apiVersion);
+        ResponseWrapper<Object> wrapped = ResponseWrapper.of(
+                body,
+                meta);
 
-private String extractRequestId(ServerHttpRequest request)
-    {
-    String rid = request.getHeaders().getFirst("X-Request-Id");
-    if (rid != null && !rid.isEmpty())
-        return rid;
-    return UUID.randomUUID().toString();
-    }
+        if (StringHttpMessageConverter.class.isAssignableFrom(selectedConverterType)) {
+            try {
+                return objectMapper.writeValueAsString(wrapped);
+            } catch (JsonProcessingException e) {
+                return body;
+            }
+        }
+
+        return wrapped;
+        }
+
+    private String extractRequestId(ServerHttpRequest request)
+        {
+        String rid = request.getHeaders().getFirst("X-Request-Id");
+        if (rid != null && !rid.isEmpty()) {
+            return rid;
+        }
+        return UUID.randomUUID().toString();
+        }
 }

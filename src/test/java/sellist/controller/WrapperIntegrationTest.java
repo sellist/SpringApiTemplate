@@ -17,53 +17,53 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class WrapperIntegrationTest
 {
 
-@Autowired
-private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-@Test
-void helloIsWrapped()
-        throws Exception
-    {
-    mockMvc.perform(get("/api/example/hello"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.meta.requestId").exists())
-            .andExpect(jsonPath("$.meta.timestamp").exists())
-            .andExpect(jsonPath("$.meta.version").value("1.0.0"))
-            .andExpect(jsonPath("$.data.message").value("Hello, world!"));
-    }
+    @Test
+    void helloIsWrapped()
+            throws Exception
+        {
+        mockMvc.perform(get("/api/example/hello"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.meta.requestId").exists())
+                .andExpect(jsonPath("$.meta.timestamp").exists())
+                .andExpect(jsonPath("$.meta.version").value("1.0.0"))
+                .andExpect(jsonPath("$.data.message").value("Hello, world!"));
+        }
 
-@Test
-void itemsAreWrapped()
-        throws Exception
-    {
-    mockMvc.perform(get("/api/example/items"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.meta.requestId").exists())
-            .andExpect(jsonPath("$.meta.timestamp").exists())
-            .andExpect(jsonPath("$.meta.version").value("1.0.0"))
-            .andExpect(jsonPath("$.data[0]").value("alpha"))
-            .andExpect(jsonPath("$.data[1]").value("beta"))
-            .andExpect(jsonPath("$.data[2]").value("gamma"));
-    }
+    @Test
+    void itemsAreWrapped()
+            throws Exception
+        {
+        mockMvc.perform(get("/api/example/items"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.meta.requestId").exists())
+                .andExpect(jsonPath("$.meta.timestamp").exists())
+                .andExpect(jsonPath("$.meta.version").value("1.0.0"))
+                .andExpect(jsonPath("$.data[0]").value("alpha"))
+                .andExpect(jsonPath("$.data[1]").value("beta"))
+                .andExpect(jsonPath("$.data[2]").value("gamma"));
+        }
 
-@Test
-void textIsWrapped()
-        throws Exception
-    {
-    mockMvc.perform(get("/api/example/text"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.meta.requestId").exists())
-            .andExpect(jsonPath("$.meta.version").value("1.0.0"))
-            .andExpect(jsonPath("$.data").value("plain text"));
-    }
+    @Test
+    void textIsWrapped()
+            throws Exception
+        {
+        mockMvc.perform(get("/api/example/text"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.meta.requestId").exists())
+                .andExpect(jsonPath("$.meta.version").value("1.0.0"))
+                .andExpect(jsonPath("$.data").value("plain text"));
+        }
 
-@Test
-void notFoundReturnsWrappedError()
-        throws Exception
-    {
-    mockMvc.perform(get("/api/nonexistent"))
-            .andExpect(status().isNotFound())
-            .andExpect(jsonPath("$.meta.requestId").exists())
-            .andExpect(jsonPath("$.meta.version").value("1.0.0"));
-    }
+    @Test
+    void notFoundReturnsWrappedError()
+            throws Exception
+        {
+        mockMvc.perform(get("/api/nonexistent"))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.meta.requestId").exists())
+                .andExpect(jsonPath("$.meta.version").value("1.0.0"));
+        }
 }
